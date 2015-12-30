@@ -46,9 +46,19 @@
 }
 - (PopMenu *)popMenu{
     NSMutableArray * items = [NSMutableArray array];
-    if (_popMenu == nil) {
-        _popMenu = [PopMenu alloc]initWithFrame:<#(CGRect)#> items:<#(NSArray *)#>
+    NSArray * titleArr = @[@"文字",@"相册",@"拍摄",@"签到",@"点评",@"更多"];
+    NSArray * imageNameArr = @[@"tabbar_compose_idea",@"tabbar_compose_photo",@"tabbar_compose_review",@"tabbar_compose_weibo",@"tabbar_compose_lbs",@"tabbar_compose_more"];
+    for (int i = 0; i < titleArr.count; i++) {
+        MenuItem * item = [[MenuItem alloc]initWithTitle:titleArr[i] iconName:imageNameArr[i] glowColor:[UIColor grayColor]];
+        [items addObject:item];
     }
+    if (_popMenu == nil) {
+        _popMenu = [[PopMenu alloc]initWithFrame:[UIScreen mainScreen].bounds items:items];
+    }
+    _popMenu.didSelectedItemCompletion = ^(MenuItem * item){
+        NSLog(@"点击了%@",item.title);
+    };
+    return _popMenu;
 }
 
 
@@ -68,7 +78,7 @@
     [self.tabBar addSubview:self.wbTabBar];
     self.wbTabBar.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background"]];
     self.wbTabBar.plusBlock = ^(){
-        
+        [weakSelf.popMenu showMenuAtView:weakSelf.view];
     };
     
     

@@ -21,6 +21,8 @@
 		11CDB4F91C322F0100E07899 /* WBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDB4F81C322F0100E07899 /* WBTabBar.m */; };
 		11CDB4FC1C322F8C00E07899 /* WBTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDB4FB1C322F8C00E07899 /* WBTabBarButton.m */; };
 		4A48E6DC81FF6752994C84F9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D66B8A1877BF9128D816E057 /* libPods.a */; };
+		BC9E4B7A1C33820F002E3B73 /* UIBarButtonItem+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9E4B791C33820F002E3B73 /* UIBarButtonItem+Util.m */; };
+		BC9E4B7D1C338696002E3B73 /* TitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9E4B7C1C338696002E3B73 /* TitleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		11CDB4FB1C322F8C00E07899 /* WBTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTabBarButton.m; sourceTree = "<group>"; };
 		11CDB4FD1C32310500E07899 /* WB-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WB-PrefixHeader.pch"; sourceTree = "<group>"; };
 		21A3D207B875E3A3B8175BAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BC9E4B781C33820F002E3B73 /* UIBarButtonItem+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Util.h"; sourceTree = "<group>"; };
+		BC9E4B791C33820F002E3B73 /* UIBarButtonItem+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Util.m"; sourceTree = "<group>"; };
+		BC9E4B7B1C338696002E3B73 /* TitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleButton.h; sourceTree = "<group>"; };
+		BC9E4B7C1C338696002E3B73 /* TitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleButton.m; sourceTree = "<group>"; };
 		CCFDB35166A6DB368C9C6157 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D66B8A1877BF9128D816E057 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,6 +151,7 @@
 		11CDB4CE1C321E0400E07899 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				BC9E4B771C3381D7002E3B73 /* Categroy */,
 				11CDB4CF1C321E0400E07899 /* 3rd */,
 				11CDB4D01C321E0400E07899 /* MVC */,
 				11CDB4E51C321E0400E07899 /* Resource */,
@@ -233,6 +240,8 @@
 		11CDB4D81C321E0400E07899 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC9E4B7B1C338696002E3B73 /* TitleButton.h */,
+				BC9E4B7C1C338696002E3B73 /* TitleButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -381,6 +390,15 @@
 				21A3D207B875E3A3B8175BAA /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC9E4B771C3381D7002E3B73 /* Categroy */ = {
+			isa = PBXGroup;
+			children = (
+				BC9E4B781C33820F002E3B73 /* UIBarButtonItem+Util.h */,
+				BC9E4B791C33820F002E3B73 /* UIBarButtonItem+Util.m */,
+			);
+			path = Categroy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CDB4ED1C32205600E07899 /* HomeTableViewController.m in Sources */,
+				BC9E4B7D1C338696002E3B73 /* TitleButton.m in Sources */,
 				11CDB4F01C32206E00E07899 /* MessageTableViewController.m in Sources */,
 				11CDB4F91C322F0100E07899 /* WBTabBar.m in Sources */,
 				11CDB4F61C3220A000E07899 /* PersonalTableViewController.m in Sources */,
@@ -542,6 +561,7 @@
 				11CDB4AE1C321B3400E07899 /* AppDelegate.m in Sources */,
 				11CDB4F31C32208A00E07899 /* DiscoveryTableViewController.m in Sources */,
 				11CDB4AB1C321B3400E07899 /* main.m in Sources */,
+				BC9E4B7A1C33820F002E3B73 /* UIBarButtonItem+Util.m in Sources */,
 				11CDB4FC1C322F8C00E07899 /* WBTabBarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
